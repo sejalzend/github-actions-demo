@@ -19,6 +19,6 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
       - name: Build docker image
-        run: docker build -t sejalzend/github-actions-demo .
+        run: docker build -t sejalzend/github-actions-demo:latest .
       - name : Push to dockerhub
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/github-actions-demo
